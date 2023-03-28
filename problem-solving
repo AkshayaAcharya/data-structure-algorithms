@@ -28,3 +28,13 @@
     }
     console.log(sumArr.join(' '))
 }
+
+## PBM 3: You are in charge of the cake for a child's birthday. You have decided the cake will have one candle for each year of their total age. They will only be able to blow out the tallest of the candles. Count how many candles are tallest.
+  function birthdayCakeCandles(candles) {
+    // Write your code here
+    const sorted = arr.sort();
+    const max = sorted[sorted.length - 1]
+    let candlesCount = 0;
+    candlesCount = sorted.filter(ar=>ar==max).length
+    console.log(candlesCount)
+}
