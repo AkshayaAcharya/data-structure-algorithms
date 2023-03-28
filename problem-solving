@@ -38,4 +38,15 @@
 }
 console.log(birthdayCakeCandles([2,3,3,5,1,2,5,8,8,8,84,9]))
 
+TIME: 
+function timeConversion(s) {
+    // Write your code here
+let hr = 0;
+    if(s.slice(-2) == "PM"){
+        hr = +s.slice(0,2) + 12
+    } else if(s.slice(-2) == "AM"){
+        hr = +s.slice(0,2) == 12 ? 0 : +s.slice(0,2) 
+    }
+    
+    return hr.toString().padStart(2,0);}
 
