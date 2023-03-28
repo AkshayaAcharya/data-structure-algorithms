@@ -1,4 +1,4 @@
-## Print stair case #
+## PBM: Print stair case #
 
   for(let i=1;i<=n;i++){
        console.log(''.padEnd(i,'#').padStart(n,'.'))
