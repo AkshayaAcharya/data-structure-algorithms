@@ -1,5 +1,14 @@
 ## PBM: Print stair case #
 
-  for(let i=1;i<=n;i++){
+  function printHash(n) {
+    for(let i=1;i<=n;i++){
        console.log(''.padEnd(i,'#').padStart(n,'.'))
     }
+  }
+  printHash(4)
+  
+  OUTPUT: 
+               #
+              ##
+             ###
+            ####
