@@ -1,4 +1,4 @@
-## PBM: Print stair case #
+## PBM 1: Print stair case #
 
   function printHash(n) {
     for(let i=1;i<=n;i++){
@@ -12,3 +12,16 @@
               ##
              ###
             ####
+
+## PBM 2: Given five positive integers, find the minimum and maximum values that can be calculated by summing exactly four of the five integers. Then print the respective minimum and maximum values as a single line of two space-separated long integers.
+
+  function minMaxSum(arr){
+    let sumArr = [0,0]
+    const sorted = arr.sort();
+    const len = sorted.length-1;
+    for(const i of sorted){
+        sumArr[1] += sorted.indexOf(i) !== 0 && i;
+        sumArr[0] += sorted.indexOf(i) !== len  && i;
+    }
+    console.log(sumArr.join(' '))
+}
