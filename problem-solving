@@ -38,15 +38,40 @@
 }
 console.log(birthdayCakeCandles([2,3,3,5,1,2,5,8,8,8,84,9]))
 
-TIME: 
+
+## PBM 4: Given a time in -hour AM/PM format, convert it to military (24-hour) time.
+
+Note: - 12:00:00AM on a 12-hour clock is 00:00:00 on a 24-hour clock.
+- 12:00:00PM on a 12-hour clock is 12:00:00 on a 24-hour clock.
+
+Example
+
+
+Return '12:01:00'.
+
+
+Return '00:01:00'.
+
+Function Description
+
+Complete the timeConversion function in the editor below. It should return a new string representing the input time in 24 hour format.
+
+timeConversion has the following parameter(s):
+
+string s: a time in 12 hour format
+Returns
+
+string: the time in 24  hour format
+
+SOLUTION:
 function timeConversion(s) {
     // Write your code here
-let hr = 0;
+   let hr = 0;
     if(s.slice(-2) == "PM"){
-        hr = +s.slice(0,2) + 12
+        hr = +s.slice(0,2) == 12 ?  +s.slice(0,2) : +s.slice(0,2) + 12
     } else if(s.slice(-2) == "AM"){
         hr = +s.slice(0,2) == 12 ? 0 : +s.slice(0,2) 
     }
     
-    return hr.toString().padStart(2,0);}
-
+    return `${hr.toString().padStart(2,0)}${s.slice(2,-2)}`;
+}
